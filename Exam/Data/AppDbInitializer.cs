@@ -25,31 +25,31 @@ namespace Exam.Data
                         new Location()
                         {
                             Name = "Location 1",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
+                            Logo = "location1.jpg",
                             Description = "This is the description of the first place"
                         },
                         new Location()
                         {
                             Name = "Location 2",
-                            Logo = "http://dotnethow.net/images/locations/location-2.jpeg",
+                            Logo = "location2.jpg",
                             Description = "This is the description of the second place"
                         },
                         new Location()
                         {
                             Name = "Location 3",
-                            Logo = "http://dotnethow.net/images/locations/location-3.jpeg",
+                            Logo = "location3.jpeg",
                             Description = "This is the description of the third place"
                         },
                         new Location()
                         {
                             Name = "Location 4",
-                            Logo = "http://dotnethow.net/images/locations/location-4.jpeg",
+                            Logo = "location5.png",
                             Description = "This is the description of the fourth place"
                         },
                         new Location()
                         {
                             Name = "Location 5",
-                            Logo = "http://dotnethow.net/images/locations/location-5.jpeg",
+                            Logo = "location6.jpg",
                             Description = "This is the description of the fifth place"
                         },
                     });
@@ -65,32 +65,32 @@ namespace Exam.Data
                         {
                             FullName = "Guest 1",
                             Bio = "This is the Bio of the first guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-1.jpeg"
+                            ProfilePictureURL = "guest1.jpg"
 
                         },
                         new Guest()
                         {
                             FullName = "Guest 2",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-2.jpeg"
+                            ProfilePictureURL = "guest2.jpg"
                         },
                         new Guest()
                         {
                             FullName = "Guest 3",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-3.jpeg"
+                            ProfilePictureURL = "guest3.jpeg"
                         },
                         new Guest()
                         {
                             FullName = "Guest 4",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-4.jpeg"
+                            ProfilePictureURL = "guest4.jpg"
                         },
                         new Guest()
                         {
                             FullName = "Guest 5",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-5.jpeg"
+                            ProfilePictureURL = "guest5.jpg"
                         }
                     });
                     context.SaveChanges();
@@ -105,32 +105,32 @@ namespace Exam.Data
                         {
                             FullName = "Organizer 1",
                             Bio = "This is the Bio of the first organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-1.jpeg"
+                            ProfilePictureURL = "guest1.jpg"
 
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 2",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-2.jpeg"
+                            ProfilePictureURL = "guest2.jpg"
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 3",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-3.jpeg"
+                            ProfilePictureURL = "guest3.jpeg"
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 4",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-4.jpeg"
+                            ProfilePictureURL = "guest4.jpg"
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 5",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-5.jpeg"
+                            ProfilePictureURL = "guest5.jpg"
                         }
                     });
                     context.SaveChanges();
@@ -144,9 +144,9 @@ namespace Exam.Data
                         new Event()
                         {
                             Name = "Innovation Conference",
-                            Description = "This is the Innovation Conference event description",
+                            Description = "This is the  event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/events/event-3.jpeg",
+                            ImageURL = "event1.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
                             LocationId = 3,
@@ -156,9 +156,9 @@ namespace Exam.Data
                         new Event()
                         {
                             Name = "City Lights Celebrationn",
-                            Description = "This is the City Lights Celebration event description",
+                            Description = "This is the  event description",
                             Price = 29.50,
-                            ImageURL = "http://dotnethow.net/images/events/event-1.jpeg",
+                            ImageURL = "event2.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
                             LocationId = 1,
@@ -168,9 +168,9 @@ namespace Exam.Data
                         new Event()
                         {
                             Name = "Business Strategy Masterclass",
-                            Description = "This is the Business Strategy Masterclass event description",
+                            Description = "This is the  event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/events/event-4.jpeg",
+                            ImageURL = "event3.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
                             LocationId = 4,
@@ -180,9 +180,9 @@ namespace Exam.Data
                         new Event()
                         {
                             Name = "Web Development Bootcamp",
-                            Description = "This isWeb Development Bootcamp event description",
+                            Description = "This is the  event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/events/event-6.jpeg",
+                            ImageURL = "event4.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
                             LocationId = 1,
@@ -192,9 +192,9 @@ namespace Exam.Data
                         new Event()
                         {
                             Name = "Leadership Development Workshop",
-                            Description = "This is the Leadership Development Workshop event description",
+                            Description = "This is the  event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/events/event-7.jpeg",
+                            ImageURL = "event5.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
                             LocationId = 1,
@@ -204,9 +204,9 @@ namespace Exam.Data
                         new Event()
                         {
                             Name = "Future of AI",
-                            Description = "This is the Future of AI event description",
+                            Description = "This is the  event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/events/event-8.jpeg",
+                            ImageURL = "event5.jpg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
                             LocationId = 1,
@@ -338,7 +338,7 @@ namespace Exam.Data
 
                 //Users
                 var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-                string adminUserEmail = "admin@etickets.com";
+                string adminUserEmail = "admin@dali.com";
 
                 var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
                 if (adminUser == null)
@@ -355,7 +355,7 @@ namespace Exam.Data
                 }
 
 
-                string appUserEmail = "user@etickets.com";
+                string appUserEmail = "user@exam.com";
 
                 var appUser = await userManager.FindByEmailAsync(appUserEmail);
                 if (appUser == null)

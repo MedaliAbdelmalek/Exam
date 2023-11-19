@@ -45,7 +45,7 @@ namespace Exam.Controllers
             ModelState.Remove("Events");
 
             if (!ModelState.IsValid) return View(location);
-            location.Logo = location.Name + "_" + Logo.FileName;
+            location.Logo =  Logo.FileName;
             await _service.AddAsync(location);
             saveFile(Logo, location.Name);
             return RedirectToAction(nameof(Index));
@@ -76,7 +76,7 @@ namespace Exam.Controllers
             if (!ModelState.IsValid) return View(location);
             if (Logo != null)
             {
-                location.Logo = location.Name + "_" + Logo.FileName;
+                location.Logo =  Logo.FileName;
                 saveFile(Logo, location.Name);
 
             }
@@ -106,7 +106,7 @@ namespace Exam.Controllers
 
         private void saveFile(IFormFile file, String name)
         {
-            var fileName = name + "_" + Path.GetFileName(file.FileName);
+            var fileName =  Path.GetFileName(file.FileName);
 
             // Specify the directory where you want to move the file
             var uploadDir = Path.Combine(_hostingEnvironment.WebRootPath, "EventUploads");

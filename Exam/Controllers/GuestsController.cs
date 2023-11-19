@@ -40,7 +40,7 @@ namespace Exam.Controllers
             {
                 return View(guest);
             }
-            guest.ProfilePictureURL = guest.FullName + "_" + ProfilePictureURL.FileName;
+            guest.ProfilePictureURL =  ProfilePictureURL.FileName;
             await _service.AddAsync(guest);
             saveFile(ProfilePictureURL, guest.FullName);
 
@@ -76,7 +76,7 @@ namespace Exam.Controllers
             {
                 return View(guest);
             }
-            guest.ProfilePictureURL = guest.FullName + "_" + ProfilePictureURL.FileName;
+            guest.ProfilePictureURL =  ProfilePictureURL.FileName;
             await _service.UpdateAsync(id, guest);
             this.saveFile(ProfilePictureURL,guest.FullName);
             return RedirectToAction(nameof(Index));
@@ -102,7 +102,7 @@ namespace Exam.Controllers
 
         private void saveFile(IFormFile file, String name)
         {
-            var fileName = name + "_" + Path.GetFileName(file.FileName);
+            var fileName =  Path.GetFileName(file.FileName);
 
             // Specify the directory where you want to move the file
             var uploadDir = Path.Combine(_hostingEnvironment.WebRootPath, "EventUploads");

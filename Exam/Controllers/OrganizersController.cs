@@ -47,7 +47,7 @@ namespace Exam.Controllers
             ModelState.Remove("Events");
             if (!ModelState.IsValid || ProfilePictureURL == null) return View(organizer);
 
-            organizer.ProfilePictureURL = organizer.FullName + "_" + ProfilePictureURL.FileName;
+            organizer.ProfilePictureURL =  ProfilePictureURL.FileName;
             await _service.AddAsync(organizer);
             this.saveFile(ProfilePictureURL, organizer.FullName);
             return RedirectToAction(nameof(Index));
@@ -72,7 +72,7 @@ namespace Exam.Controllers
             {
                 if (ProfilePictureURL != null)
                 {
-                    organizer.ProfilePictureURL = organizer.FullName + "_" + ProfilePictureURL.FileName;
+                    organizer.ProfilePictureURL =  ProfilePictureURL.FileName;
                     this.saveFile(ProfilePictureURL, organizer.FullName);
                 }
                 await _service.UpdateAsync(id, organizer);
@@ -101,7 +101,7 @@ namespace Exam.Controllers
 
         private void saveFile(IFormFile file, String name)
         {
-            var fileName = name + "_" + Path.GetFileName(file.FileName);
+            var fileName =  Path.GetFileName(file.FileName);
 
             // Specify the directory where you want to move the file
             var uploadDir = Path.Combine(_hostingEnvironment.WebRootPath, "EventUploads");
