@@ -25,7 +25,7 @@ namespace Exam.Data
                         new Location()
                         {
                             Name = "Location 1",
-                            Logo = "http://dotnethow.net/images/locations/location-1.jpeg",
+                            Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
                             Description = "This is the description of the first place"
                         },
                         new Location()
