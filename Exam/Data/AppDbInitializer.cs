@@ -1,5 +1,7 @@
 ﻿using Exam.Data.Enums;
+using Exam.Data.Static;
 using Exam.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 
 namespace Exam.Data
@@ -23,31 +25,31 @@ namespace Exam.Data
                         new Location()
                         {
                             Name = "Location 1",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
+                            Logo = "http://dotnethow.net/images/locations/location-1.jpeg",
                             Description = "This is the description of the first place"
                         },
                         new Location()
                         {
                             Name = "Location 2",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
+                            Logo = "http://dotnethow.net/images/locations/location-2.jpeg",
                             Description = "This is the description of the second place"
                         },
                         new Location()
                         {
                             Name = "Location 3",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
+                            Logo = "http://dotnethow.net/images/locations/location-3.jpeg",
                             Description = "This is the description of the third place"
                         },
                         new Location()
                         {
                             Name = "Location 4",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
+                            Logo = "http://dotnethow.net/images/locations/location-4.jpeg",
                             Description = "This is the description of the fourth place"
                         },
                         new Location()
                         {
                             Name = "Location 5",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
+                            Logo = "http://dotnethow.net/images/locations/location-5.jpeg",
                             Description = "This is the description of the fifth place"
                         },
                     });
@@ -63,32 +65,32 @@ namespace Exam.Data
                         {
                             FullName = "Guest 1",
                             Bio = "This is the Bio of the first guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-1.jpeg"
 
                         },
                         new Guest()
                         {
                             FullName = "Guest 2",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-2.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-2.jpeg"
                         },
                         new Guest()
                         {
                             FullName = "Guest 3",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-3.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-3.jpeg"
                         },
                         new Guest()
                         {
                             FullName = "Guest 4",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-4.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-4.jpeg"
                         },
                         new Guest()
                         {
                             FullName = "Guest 5",
                             Bio = "This is the Bio of the second guest",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-5.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/guests/guest-5.jpeg"
                         }
                     });
                     context.SaveChanges();
@@ -103,32 +105,32 @@ namespace Exam.Data
                         {
                             FullName = "Organizer 1",
                             Bio = "This is the Bio of the first organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-1.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-1.jpeg"
 
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 2",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-2.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-2.jpeg"
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 3",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-3.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-3.jpeg"
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 4",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-4.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-4.jpeg"
                         },
                         new Organizer()
                         {
                             FullName = "Organizer 5",
                             Bio = "This is the Bio of the second organizer",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-5.jpeg"
+                            ProfilePictureURL = "http://dotnethow.net/images/organizers/organizer-5.jpeg"
                         }
                     });
                     context.SaveChanges();
@@ -144,7 +146,7 @@ namespace Exam.Data
                             Name = "Innovation Conference",
                             Description = "This is the Innovation Conference event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
+                            ImageURL = "http://dotnethow.net/images/events/event-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
                             LocationId = 3,
@@ -156,7 +158,7 @@ namespace Exam.Data
                             Name = "City Lights Celebrationn",
                             Description = "This is the City Lights Celebration event description",
                             Price = 29.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
+                            ImageURL = "http://dotnethow.net/images/events/event-1.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
                             LocationId = 1,
@@ -168,7 +170,7 @@ namespace Exam.Data
                             Name = "Business Strategy Masterclass",
                             Description = "This is the Business Strategy Masterclass event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
+                            ImageURL = "http://dotnethow.net/images/events/event-4.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
                             LocationId = 4,
@@ -180,7 +182,7 @@ namespace Exam.Data
                             Name = "Web Development Bootcamp",
                             Description = "This isWeb Development Bootcamp event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
+                            ImageURL = "http://dotnethow.net/images/events/event-6.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
                             LocationId = 1,
@@ -192,7 +194,7 @@ namespace Exam.Data
                             Name = "Leadership Development Workshop",
                             Description = "This is the Leadership Development Workshop event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
+                            ImageURL = "http://dotnethow.net/images/events/event-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
                             LocationId = 1,
@@ -204,7 +206,7 @@ namespace Exam.Data
                             Name = "Future of AI",
                             Description = "This is the Future of AI event description",
                             Price = 39.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
+                            ImageURL = "http://dotnethow.net/images/events/event-8.jpeg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
                             LocationId = 1,
@@ -321,5 +323,55 @@ namespace Exam.Data
             }
 
         }
+        public static async Task SeedUsersAndRolesAsync(IApplicationBuilder applicationBuilder)
+        {
+            using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
+            {
+
+                //Roles
+                var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+                if (!await roleManager.RoleExistsAsync(UserRoles.User))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+
+                //Users
+                var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                string adminUserEmail = "admin@etickets.com";
+
+                var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
+                if (adminUser == null)
+                {
+                    var newAdminUser = new ApplicationUser()
+                    {
+                        FullName = "Admin User",
+                        UserName = "admin-user",
+                        Email = adminUserEmail,
+                        EmailConfirmed = true
+                    };
+                    await userManager.CreateAsync(newAdminUser, "Coding@1234?");
+                    await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
+                }
+
+
+                string appUserEmail = "user@etickets.com";
+
+                var appUser = await userManager.FindByEmailAsync(appUserEmail);
+                if (appUser == null)
+                {
+                    var newAppUser = new ApplicationUser()
+                    {
+                        FullName = "Application User",
+                        UserName = "app-user",
+                        Email = appUserEmail,
+                        EmailConfirmed = true
+                    };
+                    await userManager.CreateAsync(newAppUser, "Coding@1234?");
+                    await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+                }
+            }
+        }
     }
+
 }

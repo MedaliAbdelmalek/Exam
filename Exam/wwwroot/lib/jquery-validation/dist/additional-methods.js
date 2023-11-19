@@ -6,13 +6,13 @@
  * Copyright (c) 2017 Jörn Zaefferer
  * Released under the MIT license
  */
-(function( factory ) {
+(function( fguesty ) {
 	if ( typeof define === "function" && define.amd ) {
-		define( ["jquery", "./jquery.validate"], factory );
+		define( ["jquery", "./jquery.validate"], fguesty );
 	} else if (typeof module === "object" && module.exports) {
-		module.exports = factory( require( "jquery" ) );
+		module.exports = fguesty( require( "jquery" ) );
 	} else {
-		factory( jQuery );
+		fguesty( jQuery );
 	}
 }(function( $ ) {
 
@@ -107,11 +107,11 @@ $.validator.addMethod( "bankaccountNL", function( value, element ) {
 	var account = value.replace( / /g, "" ), // Remove spaces
 		sum = 0,
 		len = account.length,
-		pos, factor, digit;
+		pos, fguest, digit;
 	for ( pos = 0; pos < len; pos++ ) {
-		factor = len - pos;
+		fguest = len - pos;
 		digit = account.substring( pos, pos + 1 );
-		sum = sum + factor * digit;
+		sum = sum + fguest * digit;
 	}
 	return sum % 11 === 0;
 }, "Please specify a valid bank account number" );

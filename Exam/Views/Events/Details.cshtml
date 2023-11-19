@@ -1,0 +1,88 @@
+﻿@model Event
+
+@{
+    ViewData["Title"] = "Event details";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="card mb-12">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-header text-white bg-info">
+                        <p class="card-text">
+                            <h5 class="card-title">
+                                @Model.Name
+                            </h5>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="~/EventUploads/@(Model.Name)_@(Model.ImageURL)" width="100%" alt="@Model.Name">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text">@Model.Description</p>
+                        <p class="card-text">
+                            <b>Location: </b>
+                            <a asp-controller="Locations" asp-action="Details" asp-route-id="@Model.LocationId">
+                                @Model.Location.Name
+                            </a>
+                        </p>
+                        <p class="card-text">
+                            <b>Organizer: </b>
+                            <a asp-controller="Organizers" asp-action="Details" asp-route-id="@Model.OrganizerId">
+                                @Model.Organizer.FullName
+                            </a>
+                        </p>
+                        <p class="card-text"><b>Category: </b>@Model.EventCategory</p>
+                        <p class="card-text"><b>Start Date: </b>@Model.StartDate.ToString("dd MMM yy")</p>
+                        <p class="card-text"><b>End Date: </b>@Model.EndDate.ToString("dd MMM yy")</p>
+                        <p class="card-text ">
+                            <b>Status: </b>
+                            @if (DateTime.Now >= Model.StartDate && DateTime.Now <= Model.EndDate)
+                            {
+                                <span class="badge bg-success text-white">AVAILABLE</span>
+                            }
+                            else if (DateTime.Now > Model.EndDate)
+                            {
+                                <span class="badge bg-danger text-white">EXPIRED</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-primary text-white">UPCOMING</span>
+                            }
+                        </p>
+                        <p class="card-text">
+                            <b>Guests: </b>
+                            <hr />
+                            <div class="row">
+                                @foreach (var guest in Model.Guests_Events)
+                                {
+                                    <div class="column text-center">
+                                        <img class="border-info rounded-circle" src="~/EventUploads/@(guest.Guest.ProfilePictureURL)" style="max-width: 50px" />
+                                        <br />
+                                        <a asp-controller="Guests" asp-action="Details" asp-route-id="@guest.GuestId">@guest.Guest.FullName</a>
+                                    </div>
+                                }
+                            </div>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card-footer">
+                        <p class="card-text">
+                            <a class="btn btn-outline-primary float-right" asp-action="Index">
+                                Back to List
+                            </a>
+                            <a class="btn btn-success text-white  @((DateTime.Now > Model.EndDate) ? "disabled" : "")" 
+                               asp-controller="Orders" 
+                               asp-action="AddItemToShoppingCart" asp-route-id="@Model.Id"><i class="bi bi-cart-plus"></i> Add to Cart (Price @Model.Price.ToString("c"))</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

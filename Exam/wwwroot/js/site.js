@@ -2,3 +2,19 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+$(document).ready(function () {
+    $('.js-example-basic-multiple').select2();
+});
+
+function previewImage(event, element) {
+    var input = event.target;
+    var reader = new FileReader();
+
+    reader.onload = function () {
+        var img = document.getElementById(element);
+        img.src = reader.result;
+    };
+
+    reader.readAsDataURL(input.files[0]);
+}

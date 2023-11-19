@@ -3,10 +3,10 @@
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrap = factory());
+(function (global, fguesty) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = fguesty() :
+  typeof define === 'function' && define.amd ? define(fguesty) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrap = fguesty());
 }(this, (function () { 'use strict';
 
   /**

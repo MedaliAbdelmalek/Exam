@@ -1,8 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Exam.Data.Base;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Exam.Models
 {
-    public class Guest : IEntityBase
+    public class Guest:IEntityBase
     {
         [Key]
         public int Id { get; set; }
@@ -21,6 +26,6 @@ namespace Exam.Models
         public string Bio { get; set; }
 
         //Relationships
-        public List<Actor_Movie> Actors_Movies { get; set; }
+        public List<Guest_Event> Guests_Events { get; set; }
     }
 }
